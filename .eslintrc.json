@@ -24,6 +24,7 @@
         "react"
     ],
     "rules": {
+        "import/no-named-as-default": 0,
         "no-debugger": "off",
         "no-console": "off",
         "no-unused-vars": "warn",
