@@ -4,11 +4,14 @@
   "description": "Create a community of like minded authors to foster inspiration and innovation by leveraging the modern web.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
-    "test": "jest",
+    "heroku-prebuild": "npm i ",
+    "heroku-postbuild": "npm run build",
+    "start": "webpack-dev-server --open --mode production --hot",
     "coveralls": "jest --config=jest.config.js --coverage -u",
-    "lint": "eslint --ext .js --ext .jsx ."
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production ",
+    "lint": "eslint --ext .js --ext .jsx .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
