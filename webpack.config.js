@@ -1,10 +1,9 @@
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './src/index.js',
-  ],
+  entry: ['./src/index.js'],
   output: {
     path: path.join(path.join(__dirname, './'), 'dist'),
     filename: 'bundle.js',
@@ -36,11 +35,10 @@ module.exports = {
           {
             loader: 'sass-loader',
           },
-
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [{
           loader: 'url-loader',
           options: {
@@ -57,6 +55,11 @@ module.exports = {
     stats: 'minimal',
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env.API_URL': JSON.stringify(
+        'https://ah-haven-space.herokuapp.com',
+      ),
+    }),
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',

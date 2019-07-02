@@ -16,8 +16,8 @@ class Article extends React.Component {
                   on: dd/mm/yy
         </h2>
         {/* //this is where the like component will come */}
-        <Interest src="https://img.icons8.com/metro/26/000000/long-arrow-down.png" value={3} alternative="Likes" />
-        <Interest src="https://img.icons8.com/metro/26/000000/long-arrow-down.png" value={1} alternative="disLikes" />
+        <Interest src="https://img.icons8.com/metro/26/000000/long-arrow-down.png" value="3" alternative="Likes" />
+        <Interest src="https://img.icons8.com/metro/26/000000/long-arrow-down.png" value="1" alternative="disLikes" />
 
         <h2 className="ratings">
           <strong>ratings:</strong>
@@ -41,14 +41,14 @@ class Article extends React.Component {
             ssa phasellus malesuada praesent cum id mauris. Inceptos curabitur, donec porttitor
             urna sapien mattis nisl.
       </p>
-      <p1>
+      <div>
         <p className="readtime">
           <strong>Readtime:</strong>
           {' '}
               Xmins
         </p>
-      </p1>
-      <p1 className="readmore"> Read more .....</p1>
+      </div>
+      <div className="readmore"> Read more .....</div>
     </div>
   )
 

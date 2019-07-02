@@ -1,6 +1,7 @@
 import { trialType } from '../actions/types';
 
 const initialState = {};
+
 export default (
   state = initialState, action,
 ) => {

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 
 const bar = (Recent, recentRef, About, aboutRef) => (
@@ -11,7 +13,7 @@ const bar = (Recent, recentRef, About, aboutRef) => (
 );
 
 
-const NavContent = () => (
+const NavContent = isAuthenticated => (
   <div className="navbar navbar-default navbar-white">
     <div className="container-fluid">
       <h1 className="navbar-header">
@@ -26,7 +28,10 @@ const NavContent = () => (
             {bar('Recent Articles', '/', 'About', 'none')}
           </li>
           <li className="px-3">
-            {bar('Login', 'none', 'SignUp', 'none')}
+            { isAuthenticated
+              ? bar('Account', '/profile', 'SignOut', '/signout')
+              : bar('SignIn', '/signin', 'SignUp', 'none')
+            }
           </li>
         </ul>
       </div>
@@ -35,12 +40,46 @@ const NavContent = () => (
 );
 
 
-class NavBar extends React.Component {
+export class NavBar extends React.Component {
+  state = {
+    loggedIn: false,
+  }
+
+  componentWillMount() {
+    const loggedIn = sessionStorage.getItem('isLoggedIn');
+    if (loggedIn) {
+      this.setState({
+        loggedIn: true,
+      });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const { user: { isAuthenticated } } = nextProps;
+    this.setState({
+      loggedIn: isAuthenticated,
+    });
+  }
+
+
   render() {
+    const { loggedIn } = this.state;
     return (
-      NavContent()
+      NavContent(loggedIn)
     );
   }
 }
 
-export default NavBar;
+NavBar.propTypes = {
+  user: PropTypes.shape(),
+};
+
+NavBar.defaultProps = {
+  user: {},
+};
+
+export const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps, null)(NavBar);
