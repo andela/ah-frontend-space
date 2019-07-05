@@ -24,4 +24,7 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  devServer: {
+    stats: 'minimal',
+  },
 };
