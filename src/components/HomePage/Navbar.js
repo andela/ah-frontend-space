@@ -26,7 +26,7 @@ const NavContent = () => (
             {bar('Recent Articles', '/', 'About', 'none')}
           </li>
           <li className="px-3">
-            {bar('Login', 'none', 'SignUp', 'none')}
+            {bar('Login', 'none', 'SignUp', '/signup')}
           </li>
         </ul>
       </div>

@@ -8,6 +8,8 @@ import notFound from '../components/notfound';
 import Hello from '../containers/Hello';
 import NavBar from '../components/HomePage/Navbar';
 import Footer from '../components/HomePage/Footer';
+import SignupForm from '../containers/SignupForm';
+
 
 export class Routes extends Component {
   render() {
@@ -20,6 +22,7 @@ export class Routes extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
             <Route path="/hello" component={Hello} />
+            <Route path="/signup" component={SignupForm} />
             <Route component={notFound} />
           </Switch>
         </div>

@@ -24,6 +24,13 @@
         "react"
     ],
     "rules": {
+        "no-shadow": [
+            "error",
+            {
+              "allow": ["signupAction"]
+            }
+          ],
+        "no-restricted-syntax": ["error", "iterators/generators"],
         "import/no-named-as-default": 0,
         "no-debugger": "off",
         "no-console": "off",

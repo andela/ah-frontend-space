@@ -17,8 +17,9 @@ module.exports = {
 
   // A map from regular expressions to module names that allow to stub out resources
   // with a single module
+
   moduleNameMapper: {
-    '\\.(css|scss|jpg|png|jpeg|svg)$': '<rootDir>/ignore-module.js',
+    '^.+\\.(css|less|scss|jpeg|png|gif)$': 'identity-obj-proxy',
   },
 
   // eslint-disable-next-line max-len
