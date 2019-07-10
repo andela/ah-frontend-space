@@ -13,4 +13,3 @@ script:
   - npm test -- -u
 after_script:
   - npm run coveralls
-

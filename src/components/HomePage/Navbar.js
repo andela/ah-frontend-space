@@ -30,7 +30,7 @@ const NavContent = isAuthenticated => (
           <li className="px-3">
             { isAuthenticated
               ? bar('Account', '/profile', 'SignOut', '/signout')
-              : bar('SignIn', '/signin', 'SignUp', 'none')
+              : bar('SignIn', '/signin', 'SignUp', '/signup')
             }
           </li>
         </ul>
