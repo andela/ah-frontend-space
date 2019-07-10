@@ -5,9 +5,9 @@ import {
 import Home from '../components/Home';
 import Login from '../components/login';
 import notFound from '../components/notfound';
+import Hello from '../containers/Hello';
 
-
-class Routes extends Component {
+export class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
@@ -20,6 +20,7 @@ class Routes extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
+            <Route path="/hello" component={Hello} />
             <Route component={notFound} />
           </Switch>
         </div>
