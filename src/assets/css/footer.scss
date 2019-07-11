@@ -1,0 +1,28 @@
+.footer {
+  margin-left: 18%;
+  color: #7df9ff;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.footer_container {
+  height: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer_container {
+    width: 100%;
+  }
+  .footer {
+    font-size: 10px;
+  }
+}
+
+@media screen and (device-aspect-ratio: 40 / 71) {
+  .footer {
+    margin-left: 18%;
+    color: #7df9ff;
+    font-size: 10px;
+    margin-top: 0px;
+  }
+}

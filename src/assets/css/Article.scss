@@ -1,0 +1,88 @@
+.article {
+  background-color: white;
+  border: #00bfff 0.5px solid;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 3%;
+  min-height: 16em;
+  border-radius: 6px;
+  position: relative;
+  padding: 10px 20px;
+
+  .article-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.my-4 {
+  background-color: #00bfff;
+}
+
+.article_title {
+  font-size: 15px;
+  margin-right: 8%;
+  display: inline;
+}
+
+.date {
+  display: inline;
+  font-size: 13px;
+  color: #898b8b;
+}
+
+.likes {
+  display: inline;
+  font-size: 13px;
+  color: #020c0c;
+}
+
+.dislikes {
+  display: inline;
+  font-size: 13px;
+  color: #010505;
+}
+
+.ratings {
+  display: inline;
+  font-size: 13px;
+  color: #898b8b;
+}
+
+.body {
+  margin: 0 auto;
+  margin: 0 auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+}
+
+.readtime {
+  font-size: 10px;
+  padding-left: 3em;
+  color: #898b8b;
+  display: inline;
+}
+
+.readmore {
+  font-size: 16px;
+  color: #000202;
+  display: inline;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: inherit;
+  }
+  .article {
+    width: 100%;
+    margin-top: 9px;
+    margin-left: 0%;
+  }
+}
