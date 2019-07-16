@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Routes/> should call signout function when signout is clicked 1`] = `ShallowWrapper {}`;
+
 exports[`<Routes/> should render Routes component 1`] = `ShallowWrapper {}`;

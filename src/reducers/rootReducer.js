@@ -8,6 +8,7 @@ import resetPasswordReducer from './passwordResetReducers/passwordResetReducer';
 import articleReducer from './articleReducer';
 import articleDetailReducer from './articleReducer/articleDetailReducer';
 
+import profileReducer from './profileReducer';
 
 export default combineReducers({
   index: indexReducer,
@@ -18,5 +19,5 @@ export default combineReducers({
   resetPasswordReducer,
   articles: articleReducer,
   articleDetailReducer,
-
+  profile: profileReducer,
 });
