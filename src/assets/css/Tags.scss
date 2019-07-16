@@ -1,0 +1,43 @@
+.sidebar {
+  position: sticky;
+  background-color: white;
+  color: #00bfff;
+  margin-right: 2em;
+  margin-top: 3%;
+  width: 69em;
+  height: 19em;
+  border-radius: 6px;
+  border: 1px solid #7df9ff;
+  z-index: -2;
+}
+
+.title {
+  font-size: 18px;
+  margin-left: 40%;
+  text-decoration: underline;
+}
+
+.tag {
+  margin-top: 2%;
+  margin-left: 8%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tags_heading {
+  text-decoration: underline;
+  font-size: 18px;
+  margin-left: 6.5em;
+}
+
+.badge {
+  background-color: #00bfff;
+  border: #7df9ff 1px solid;
+  margin-left: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

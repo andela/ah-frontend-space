@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import {
-  Route, BrowserRouter, Switch, Link,
+  Route, BrowserRouter, Switch,
 } from 'react-router-dom';
-import Home from '../components/Home';
+import Home from '../components/HomePage/Home';
 import Login from '../components/login';
 import notFound from '../components/notfound';
 import Hello from '../containers/Hello';
+import NavBar from '../components/HomePage/Navbar';
+import Footer from '../components/HomePage/Footer';
 
 export class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
-          <ul>
-            <li>
-              <Link to="/login" className="login"> Login </Link>
-            </li>
-          </ul>
+          <NavBar />
+          <Footer />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />

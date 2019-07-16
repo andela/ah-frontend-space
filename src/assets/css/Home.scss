@@ -1,0 +1,13 @@
+.articles {
+  margin-bottom: 6%;
+}
+
+.flex {
+  display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+  .articles {
+    margin-bottom: 12%;
+  }
+}
