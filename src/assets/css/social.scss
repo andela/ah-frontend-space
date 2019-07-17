@@ -1,0 +1,17 @@
+.google-facebook{
+    width: 170px;
+    height: 45px;
+    margin-top: 5mm;
+    border-radius: 0px !important;
+    background: #4267B2;
+    color: white;
+}
+.social-buttons .btns-social {
+    grid-gap: 10px;
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.btns-social{
+    margin-left: 70px;
+}

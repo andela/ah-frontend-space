@@ -9,4 +9,7 @@ import './assets/css/Navbar.scss';
 import './assets/css/Home.scss';
 import './assets/css/Tags.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(
+  <App />, document.getElementById('root'),
+);

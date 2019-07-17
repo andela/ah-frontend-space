@@ -22,7 +22,18 @@
     height: 70%;
 }
 
-.container Input{
+.container Input#uname{
+    width: 75%;
+    height: 40px;
+    margin-left: 60px;
+}
+
+.container Input#email{
+    width: 75%;
+    height: 40px;
+    margin-left: 60px;
+}
+.container Input#pass{
     width: 75%;
     height: 40px;
     margin-left: 60px;
@@ -54,12 +65,10 @@
 
 .words{
     clear: both;
-    margin-left: 35%;
+    margin-left: 145px;
     color: grey;
 }
 
 .line{ 
-    background-color: grey;
     width: 76%;
-    margin-right: 95px;
 }

@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner';
 import { toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 import Input from '../common/Input';
+import SocialAuthView from '../../containers/SocialAuthView';
 
 const SignInForm = ({
   email,
@@ -33,6 +34,7 @@ const SignInForm = ({
           value={email}
           onChange={onChange}
           placeholder="Enter email here"
+          required={false}
         />
 
         {errors.onSave && errors.password && (
@@ -45,6 +47,7 @@ const SignInForm = ({
           value={password}
           onChange={onChange}
           placeholder="Enter password here"
+          required={false}
         />
 
         <div className="form-group">
@@ -72,11 +75,13 @@ const SignInForm = ({
             <div className="form-link-container">
               <Link className="form-link signup" to="/signup">Sign Up</Link>
               <Link className="form-link password-reset" to="/password-reset">Forgot Password?</Link>
+              <SocialAuthView />
             </div>
           </div>
         </div>
       </form>
     </div>
+    <socialAuthButtons />
   </React.Fragment>
 );
 

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = ({
-  id, name, label, onChange, placeholder, value, type, className, disabled,
+  id, name, label, onChange, placeholder, value, type, className, disabled, required,
 }) => {
   const wrapperClass = 'form-group';
   const labelClass = 'control-label';
@@ -24,7 +24,7 @@ const Input = ({
             value={value}
             onChange={onChange}
             disabled={disabled}
-            required
+            required={required}
           />
         </div>
       </div>
@@ -42,10 +42,12 @@ Input.propTypes = {
   type: PropTypes.string.isRequired,
   className: PropTypes.string,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
 };
 
 Input.defaultProps = {
   className: 'form-control',
+  required: true,
   onChange: () => {},
   disabled: false,
   placeholder: '',
