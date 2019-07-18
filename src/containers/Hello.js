@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 import FirstAction from '../actions/FirstAction';
 
-
 export class Hello extends Component {
   componentDidMount() {
     const { FirstAction } = this.props;

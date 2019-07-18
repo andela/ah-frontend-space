@@ -1,40 +1,43 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "jest": true,
-        "node": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "airbnb"
-    ],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parser": "babel-eslint",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2018,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "import/no-named-as-default": 0,
-        "no-debugger": "off",
-        "no-console": "off",
-        "no-unused-vars": "warn",
-        "react/prop-types": "warn",
-        "react/prefer-stateless-function": 0,
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [".js", ".jsx"]
-            }
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "import/no-named-as-default": 0,
+    "no-debugger": "off",
+    "no-console": "off",
+    "no-unused-vars": "warn",
+    "react/prop-types": "warn",
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
         ]
-    }
+      }
+    ]
+  }
 }

@@ -13,7 +13,7 @@ describe('App', () => {
       klass: 'likes',
       alternative: 'likes',
       src: 'http://myimage.jpg',
-      value: 5,
+      value: '5',
     };
     const wrapper = shallow(<Interest {...props} />);
     expect(wrapper).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe('App', () => {
       klass: 'dislikes',
       alternative: 'likes',
       src: 'http://myimage.jpg',
-      value: 5,
+      value: '5',
     };
     const wrapper = shallow(<Interest {...props} />);
     expect(wrapper).toMatchSnapshot();
