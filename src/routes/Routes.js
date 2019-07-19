@@ -24,6 +24,7 @@ export class Routes extends Component {
             <Route path="/hello" component={Hello} />
             <Route path="/signup" component={SignupForm} />
             <Route component={notFound} />
+
           </Switch>
         </div>
       </BrowserRouter>

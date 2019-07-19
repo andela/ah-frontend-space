@@ -7,6 +7,7 @@ import Input from '../components/common/Input';
 import signupAction from '../actions/signupAction';
 import '../assets/css/signup.scss';
 import spinner from '../assets/images/spinner.gif';
+import SocialAuthView from './SocialAuthView';
 
 
 function inputcontent(type, id, placeholder, name, value, onChange) {
@@ -95,15 +96,9 @@ export class SignupForm extends Component {
               <Input type="submit" id="signup" value="signup" name="submit" />
             </div>
           </div>
-          <hr className="line" />
-          <h4 className="words">-- signup with --</h4>
+          <h4 className="words">OR</h4>
           <div className="row social-buttons">
-            <div className="col-xs-6">
-              <Input type="button" id="social" value="facebook" name="submit" />
-            </div>
-            <div className="col-xs-6">
-              <Input type="button" id="social" value="google" name="submit" />
-            </div>
+            <SocialAuthView />
           </div>
         </form>
       </div>

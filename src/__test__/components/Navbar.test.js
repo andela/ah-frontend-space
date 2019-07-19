@@ -41,9 +41,16 @@ describe('App', () => {
       user: {
         isAuthenticated: true,
       },
+      socialAuth: {
+        isAuthenticated: true,
+      },
     };
     wrapper.setProps({ ...nextProps });
-    console.log(wrapper.state().loggedIn);
+    expect(wrapper.state().loggedIn).toBe(true);
+  });
+  it('should setState to value of anthenticated', () => {
+    const wrapper = renderNavBar();
+    wrapper.setProps({ isAuthenticated: false });
     expect(wrapper.state().loggedIn).toBe(true);
   });
 });

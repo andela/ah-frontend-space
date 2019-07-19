@@ -29,9 +29,9 @@ const NavContent = isAuthenticated => (
           </li>
           <li className="px-3">
             { isAuthenticated
-              ? bar('Account', '/profile', 'SignOut', '/signout')
-              : bar('SignIn', '/signin', 'SignUp', '/signup')
-            }
+              ? (bar('Account', '/profile', 'SignOut', '/signout'))
+              : (bar('SignIn', '/signin', 'SignUp', '/signup'))
+           }
           </li>
         </ul>
       </div>
@@ -55,12 +55,12 @@ export class NavBar extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { user: { isAuthenticated } } = nextProps;
-    this.setState({
-      loggedIn: isAuthenticated,
-    });
+    if (nextProps.user.isAuthenticated || nextProps.socialAuth.isAuthenticated) {
+      this.setState({
+        loggedIn: true,
+      });
+    }
   }
-
 
   render() {
     const { loggedIn } = this.state;
@@ -72,14 +72,17 @@ export class NavBar extends React.Component {
 
 NavBar.propTypes = {
   user: PropTypes.shape(),
+  socialAuth: PropTypes.shape(),
 };
 
 NavBar.defaultProps = {
   user: {},
+  socialAuth: {},
 };
 
 export const mapStateToProps = state => ({
   user: state.user,
+  socialAuth: state.socialAuth,
 });
 
 export default connect(mapStateToProps, null)(NavBar);
