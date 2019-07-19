@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <ToastContainer autoClose={3000} />
+        <ToastContainer />
         <Routes />
       </Provider>
     );

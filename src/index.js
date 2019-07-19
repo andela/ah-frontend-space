@@ -8,6 +8,7 @@ import './assets/css/Article.scss';
 import './assets/css/Navbar.scss';
 import './assets/css/Home.scss';
 import './assets/css/Tags.scss';
+import './assets/css/PasswordReset.scss';
 
 
 ReactDOM.render(

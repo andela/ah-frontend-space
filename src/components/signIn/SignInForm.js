@@ -25,7 +25,12 @@ const SignInForm = ({
           </h2>
         </div>
         {errors.onSave && errors.email && (
-          <div style={{ display: 'none' }}>{toast.error(errors.email)}</div>
+          <div style={{ display: 'none' }}>
+            {toast.error(errors.email, {
+              autoClose: 3000,
+            })}
+
+          </div>
         )}
         <Input
           type="email"
@@ -38,7 +43,12 @@ const SignInForm = ({
         />
 
         {errors.onSave && errors.password && (
-          <div id="form-errors" style={{ display: 'none' }}>{toast.error(errors.password)}</div>
+          <div id="form-errors" style={{ display: 'none' }}>
+            {toast.error(errors.password, {
+              autoClose: 3000,
+            })}
+
+          </div>
         )}
         <Input
           type="password"
@@ -74,7 +84,7 @@ const SignInForm = ({
             </div>
             <div className="form-link-container">
               <Link className="form-link signup" to="/signup">Sign Up</Link>
-              <Link className="form-link password-reset" to="/password-reset">Forgot Password?</Link>
+              <Link className="form-link password-reset" to="/confirm-email">Forgot Password?</Link>
               <SocialAuthView />
             </div>
           </div>

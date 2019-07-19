@@ -9,7 +9,6 @@ describe('SignupForm',
     let wrapper;
     let instance;
     let nextProps;
-    let nextPropsFailure;
     beforeEach(() => {
       props = {
         username: '',
@@ -27,11 +26,7 @@ describe('SignupForm',
           isValid: true,
         },
       };
-      nextPropsFailure = {
-        signupReducer: {
-          isValid: false,
-        },
-      };
+
       wrapper = shallow(<SignupForm {...props} />);
       instance = wrapper.instance();
     });

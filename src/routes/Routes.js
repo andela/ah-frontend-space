@@ -9,6 +9,8 @@ import Hello from '../containers/Hello';
 import NavBar from '../components/HomePage/Navbar';
 import Footer from '../components/HomePage/Footer';
 import SignupForm from '../containers/SignupForm';
+import ConfirmEmailPage from '../containers/passwordReset/ConfirmEmailPage';
+import ResetPasswordPage from '../containers/passwordReset/ResetPasswordPage';
 
 
 export class Routes extends Component {
@@ -23,6 +25,8 @@ export class Routes extends Component {
             <Route path="/signin" component={SignInPage} />
             <Route path="/hello" component={Hello} />
             <Route path="/signup" component={SignupForm} />
+            <Route path="/confirm-email" component={ConfirmEmailPage} />
+            <Route path="/reset-password" component={ResetPasswordPage} />
             <Route component={notFound} />
 
           </Switch>
