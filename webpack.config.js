@@ -38,7 +38,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
+        test: /\.(png|jp(e*)g|gif|svg)$/,
         use: [{
           loader: 'url-loader',
           options: {
@@ -47,7 +47,6 @@ module.exports = {
           },
         }],
       },
-
     ],
   },
   devServer: {

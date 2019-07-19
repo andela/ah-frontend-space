@@ -24,6 +24,7 @@ const Input = ({
             value={value}
             onChange={onChange}
             disabled={disabled}
+            required
           />
         </div>
       </div>
@@ -35,7 +36,6 @@ Input.propTypes = {
   id: PropTypes.string,
   name: PropTypes.string,
   label: PropTypes.string,
-  // eslint-disable-next-line react/require-default-props
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
@@ -46,6 +46,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
   className: 'form-control',
+  onChange: () => {},
   disabled: false,
   placeholder: '',
   label: '',
