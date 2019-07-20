@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Article, { Interest } from '../../components/HomePage/Article';
+import HomeDetails, { Interest } from '../../components/HomePage/articleDetails';
 
 const props2 = {
   article: {
@@ -18,7 +18,7 @@ const props2 = {
 
 describe('App', () => {
   it('should match snapshot', () => {
-    const wrapper = shallow(<Article {...props2} />);
+    const wrapper = shallow(<HomeDetails {...props2} />);
     expect(wrapper).toMatchSnapshot();
   });
 

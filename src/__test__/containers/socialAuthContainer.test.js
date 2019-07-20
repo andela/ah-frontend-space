@@ -55,10 +55,10 @@ describe('socialAuthView', () => {
   });
   it('should redirect on successful login', () => {
     wrapper.setProps({ ...nextProps });
-    expect(props.history.push).toHaveBeenCalledWith('/articles');
+    expect(props.history.push).toHaveBeenCalledWith('/');
   });
   it('should redirect on successful login', () => {
     wrapper.setProps({ isAuthenticated: false });
-    expect(props.history.push).not.toHaveBeenCalledWith('/articles');
+    expect(props.history.push).not.toHaveBeenCalledWith('/');
   });
 });

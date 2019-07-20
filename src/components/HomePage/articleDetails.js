@@ -1,32 +1,33 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import dummy from '../../assets/images/dummy.jpg';
 
-class Article extends React.Component {
+class HomeDetails extends React.Component {
   ArticleContent = () => {
-    const {
-      article: {
-        author: { username }, created_at, body, title,
-        read_time, likes_count, dislikes_count, slug,
-      },
-    } = this.props;
+    const { article } = this.props;
     // eslint-disable-next-line camelcase
-    const createdAt = new Date(created_at).toLocaleDateString('en-GB', {
+    const createdAt = new Date(article.created_at).toLocaleDateString('en-GB', {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
     });
     return (
-      <div className="article">
+      <div className="article-detail">
+        <div className="header-title"><h1>{article.title}</h1></div>
         <div className="article-header">
           <h1 className="article_title">
-            <strong>{title}</strong>
+            <strong>Author</strong>
             {' '}
-                  by
+                  :
             {' '}
-            {username}
+            {article.author.username}
           </h1>
+          <p className="readtime">
+            <strong>Readtime:</strong>
+            {' '}
+            { article.read_time }
+          </p>
           <h2 className="date">
             <strong>published</strong>
             {' '}
@@ -35,8 +36,8 @@ class Article extends React.Component {
             { createdAt }
           </h2>
           {/* //this is where the like component will come */}
-          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-up.png" value={likes_count} alternative="Likes" />
-          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-down.png" value={dislikes_count} alternative="disLikes" />
+          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-up.png" value={article.likes_count} alternative="Likes" />
+          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-down.png" value={article.dislikes_count} alternative="disLikes" />
 
           <h2 className="ratings">
             <strong>ratings:</strong>
@@ -51,20 +52,10 @@ class Article extends React.Component {
         </div>
 
         <hr className="my-3" />
+        {article.url ? <img src={article.url} alt="article_image" className="body container img" /> : <img src={dummy} alt="article_image" className="body container img" />}
         <p className="body">
-          { `${body.slice(0, 1000)}....`}
+          { article.body}
         </p>
-        <div>
-          <p className="readtime">
-            <strong>Readtime:</strong>
-            {' '}
-            { read_time }
-          </p>
-        </div>
-        <div className="readmore">
-          {' '}
-          <Link to={`/${slug}`} className="more">readmore...</Link>
-        </div>
       </div>
     );
   }
@@ -85,8 +76,8 @@ export const Interest = ({
     <img
       src={src}
       alt={alternative}
-      width="15"
-      height="15"
+      width="20"
+      height="20"
     />
     <strong>
       :
@@ -102,12 +93,12 @@ Interest.propTypes = {
   src: PropTypes.string,
 };
 
-Article.propTypes = {
-  article: PropTypes.shape().isRequired,
-};
-
 Interest.defaultProps = {
   src: '',
 };
 
-export default Article;
+HomeDetails.propTypes = {
+  article: PropTypes.shape().isRequired,
+};
+
+export default HomeDetails;

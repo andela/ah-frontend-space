@@ -47,6 +47,7 @@ export class ResetPasswordPage extends Component {
     if (this.formIsValid()) {
       actions.resetPasswordCall(resetData)
         .then(
+          toast.dismiss(),
           history.push('/signin'),
         );
     }
