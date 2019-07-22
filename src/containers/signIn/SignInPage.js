@@ -43,11 +43,15 @@ export class SignInPage extends Component {
       .userSignIn(user)
       .then(() => {
         history.push('/articles');
-        toast.success(`successfully logged in as ${user.email}`);
+        toast.success(`successfully logged in as ${user.email}`, {
+          autoClose: 3000,
+        });
       })
       .catch((errorResponse) => {
         const { error } = errorResponse;
-        toast.error(`${error}`);
+        toast.error(`${error}`, {
+          autoClose: 3000,
+        });
         const newErrors = Object.assign({}, errors, { error });
         this.setState({ errors: newErrors });
       });
