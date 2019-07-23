@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { articleDetailActionTypes } from '../types';
 
-const articleDetailAction = slug => dispatch => axios.get(`https://ah-haven-space.herokuapp.com/api/articles/${slug}`)
+const baseUrl = `${process.env.API_URL}/api/articles`;
+
+const articleDetailAction = slug => dispatch => axios.get(`${baseUrl}/${slug}`)
   .then(
     (resp) => {
       dispatch({

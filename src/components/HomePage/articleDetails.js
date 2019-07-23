@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import dummy from '../../assets/images/dummy.jpg';
 
 class HomeDetails extends React.Component {
   ArticleContent = () => {
@@ -13,50 +13,87 @@ class HomeDetails extends React.Component {
       year: 'numeric',
     });
     return (
-      <div className="article-detail">
-        <div className="header-title"><h1>{article.title}</h1></div>
-        <div className="article-header">
-          <h1 className="article_title">
-            <strong>Author</strong>
-            {' '}
+      <React.Fragment>
+        <div className="article-detail">
+          <div className="header-title"><h1>{article.title}</h1></div>
+          <div className="article-header">
+            <h1 className="article_title">
+              <strong>Author</strong>
+              {' '}
                   :
-            {' '}
-            {article.author.username}
-          </h1>
-          <p className="readtime">
-            <strong>Readtime:</strong>
-            {' '}
-            { article.read_time }
-          </p>
-          <h2 className="date">
-            <strong>published</strong>
-            {' '}
+              {' '}
+              {article.author.username}
+            </h1>
+            <p className="readtime">
+              <strong>Readtime:</strong>
+              {' '}
+              { article.read_time }
+            </p>
+            <h2 className="date">
+              <strong>published</strong>
+              {' '}
                   on:
-            {' '}
-            { createdAt }
-          </h2>
-          {/* //this is where the like component will come */}
-          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-up.png" value={article.likes_count} alternative="Likes" />
-          <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-down.png" value={article.dislikes_count} alternative="disLikes" />
+              {' '}
+              { createdAt }
+            </h2>
+            {/* //this is where the like component will come */}
+            <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-up.png" value={article.likes_count} alternative="Likes" />
+            <Interest src="https://img.icons8.com/dotty/80/000000/thumbs-down.png" value={article.dislikes_count} alternative="disLikes" />
 
-          <h2 className="ratings">
-            <strong>ratings:</strong>
-            {' '}
-            <img
-              src="https://img.icons8.com/ultraviolet/40/000000/rating.png"
-              alt="ratings"
-              width="20"
-              height="20"
-            />
-          </h2>
+            <h2 className="ratings">
+              <strong>ratings:</strong>
+              {' '}
+              <img
+                src="https://img.icons8.com/ultraviolet/40/000000/rating.png"
+                alt="ratings"
+                width="20"
+                height="20"
+              />
+            </h2>
+          </div>
+
+          <hr className="my-3" />
+          {article.image ? <img src={article.image} alt="article_image" className="body container img" /> : null}
+          <p className="body">
+            { article.body}
+          </p>
         </div>
+        {
+          sessionStorage.getItem('username') === article.author.username
+            ? (
+              <div className="btn-container">
+                <Link
+                  id="edit-article-btn"
+                  type="button"
+                  className="btn btn-primary btn-sm"
+                  to={{
+                    pathname: '/edit-article',
+                    state: {
+                      article,
+                    },
 
-        <hr className="my-3" />
-        {article.url ? <img src={article.url} alt="article_image" className="body container img" /> : <img src={dummy} alt="article_image" className="body container img" />}
-        <p className="body">
-          { article.body}
-        </p>
-      </div>
+                  }}
+                >
+                    Edit
+                </Link>
+                <Link
+                  id="delete-article-btn"
+                  type="button"
+                  className="btn btn-danger btn-sm"
+                  to={{
+                    pathname: '/delete-article',
+                    state: {
+                      article,
+                    },
+                  }}
+                >
+                    Delete
+                </Link>
+              </div>
+            )
+            : <div />
+        }
+      </React.Fragment>
     );
   }
 

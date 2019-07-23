@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateArticleForm should match snapshop when loading is true 1`] = `ShallowWrapper {}`;
+
+exports[`UpdateArticleForm should match snapshot when loading is false 1`] = `ShallowWrapper {}`;
