@@ -24,8 +24,12 @@ const NavContent = isAuthenticated => (
       <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
       <div className="navbar-expand">
         <ul className="navbar-nav">
+
           <li className="">
-            {bar('Recent Articles', '/', 'About', 'none')}
+            {isAuthenticated
+              ? bar('Recent Articles', '/', 'Create article', '/create')
+              : bar('Recent Articles', '/', 'About', 'none')
+          }
           </li>
           <li className="px-3">
             { isAuthenticated
