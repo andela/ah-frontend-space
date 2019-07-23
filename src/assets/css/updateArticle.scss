@@ -1,0 +1,97 @@
+div.card.update-article {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  width: 80%;
+  margin-left: 10rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  color: darkslategrey;
+}
+
+textarea#edit-description {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  width: 100%;
+  border-bottom-color: lightgray;
+  color: darkslategrey;
+  height: 3rem;
+  padding-left: 1rem;
+}
+
+input#edit-body.form-control, input#edit-title.form-control {
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+textarea#edit-body {
+  width: 100%;
+  height: 30rem;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-top: 2rem;
+  border-bottom: 1px solid lightgrey;
+  color: darkslategrey;
+}
+
+input#btn-edit-article.btn-signin {
+  width: 20%;
+}
+
+div.card.update-article h5.card-header{
+  background: none;
+  box-shadow: inset 0px 0px 4px 1px aliceblue;
+}
+
+div.card.update-article strong {
+  color: #00bfff;
+}
+
+label#title-form-label, label#description-form-label {
+  color: deepskyblue;
+}
+
+a#edit-article-btn {
+  width: 5rem;
+  margin-left: 3rem;
+}
+
+a#delete-article-btn {
+  width: 5rem;
+  margin-left: 3rem;
+}
+
+div.btn-container {
+  padding: 2rem 20% 2rem 22%;
+}
+
+input#image-input {
+  margin: 2rem 2rem 2rem 0rem;
+}
+
+.btn-primary {
+    background-color: deepskyblue!important;
+    color: #fff;
+}
+
+.btn-primary :hover {
+    background-color: #7DF9FF;
+}
+
+@media only screen and (max-width: 768px) {
+    div.card.update-article {
+      width: 100%;
+      margin-left: 0rem;
+    }
+}

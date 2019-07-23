@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { articleActionTypes } from '../types';
 
-
 const articleAction = () => dispatch => axios.get('https://ah-haven-space.herokuapp.com/api/articles')
   .then(
     (resp) => {

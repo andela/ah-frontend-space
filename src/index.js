@@ -10,6 +10,7 @@ import './assets/css/Home.scss';
 import './assets/css/Tags.scss';
 import './assets/css/PasswordReset.scss';
 import './assets/css/Profile.scss';
+import './assets/css/updateArticle.scss';
 
 
 export default ReactDOM.render(

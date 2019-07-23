@@ -43,10 +43,10 @@ export class SignInPage extends Component {
     actions
       .userSignIn(user)
       .then(() => {
-        history.push('/');
         toast.success(`successfully logged in as ${user.email}`, {
           autoClose: 3000,
         });
+        history.push('/');
       })
       .catch((errorResponse) => {
         const { error } = errorResponse;

@@ -9,6 +9,7 @@ import articleReducer from './articleReducer';
 import articleDetailReducer from './articleReducer/articleDetailReducer';
 import profileReducer from './profileReducer';
 import createReducer from './createArticleReducer';
+import updateArticleReducer from './articleReducer/updateArticleReducers';
 
 export default combineReducers({
   index: indexReducer,
@@ -21,4 +22,5 @@ export default combineReducers({
   articleDetailReducer,
   profile: profileReducer,
   createReducer,
+  updateArticleReducer,
 });

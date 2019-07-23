@@ -10,9 +10,10 @@ class SocialAuthActions {
       return axios.post('https://ah-haven-space.herokuapp.com/api/social-auth/google', data)
         .then(
           (resp) => {
-            const { data: { user: { token } } } = resp;
+            const { data: { user: { token, username } } } = resp;
             sessionStorage.setItem('token', token);
             sessionStorage.setItem('isLoggedIn', true);
+            sessionStorage.setItem('username', username);
 
             dispatch({
               type: actionTypes.GOOGLE_LOGIN_SUCCESS,
@@ -41,10 +42,10 @@ class SocialAuthActions {
       return axios.post('https://ah-haven-space.herokuapp.com/api/social-auth/facebook', data)
         .then(
           (resp) => {
-            const { data: { user: { token } } } = resp;
+            const { data: { user: { token, username } } } = resp;
             sessionStorage.setItem('token', token);
             sessionStorage.setItem('isLoggedIn', true);
-
+            sessionStorage.setItem('username', username);
             dispatch({
               type: actionTypes.FACEBOOK_LOGIN_SUCCESS,
               payload: resp.data,
