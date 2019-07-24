@@ -8,6 +8,7 @@
   border-radius: 6px;
   position: relative;
   padding: 10px 20px;
+  color: darkslategray;
 
   .article-header {
     display: flex;
@@ -15,6 +16,37 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
+}
+
+.header-title h1{
+  text-align: center;
+}
+
+.article-detail {
+  background-color: white;
+  border: #00bfff 0px solid;
+  width: 75%;
+  margin-left: 20%;
+  margin-top: 3%;
+  position: relative;
+  color: darkslategray;
+
+  .article-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+}
+
+.article_title strong {
+  color: #898b8b;
+}
+
+.loader {
+  padding-left: 50%;
+  padding-top: 20%;
 }
 
 .my-4 {
@@ -29,7 +61,7 @@
 
 .date {
   display: inline;
-  font-size: 13px;
+  font-size: 15px;
   color: #898b8b;
 }
 
@@ -57,10 +89,12 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   font-size: 16px;
+  padding: 30px;
+  text-align: justify;
 }
 
 .readtime {
-  font-size: 10px;
+  font-size: 15px;
   padding-left: 3em;
   color: #898b8b;
   display: inline;
@@ -70,10 +104,22 @@
   font-size: 16px;
   color: #000202;
   display: inline;
-  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+a.more {
+  text-decoration: none;
+  color: #00bfff;
+}
+
+a.more:hover {
+  color: #7df9ff;
+}
+
+.img {
+  height: 30rem;
 }
 
 @media only screen and (max-width: 768px) {

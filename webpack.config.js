@@ -6,7 +6,7 @@ module.exports = {
   entry: ['./src/index.js'],
   output: {
     path: path.join(path.join(__dirname, './'), 'dist'),
-    filename: 'bundle.js',
+    filename: './bundle.js',
   },
   module: {
     rules: [
@@ -38,7 +38,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jp(e*)g|gif|svg)$/,
+        test: /\.(png|jp(e*)g|gif|jpg|svg)$/,
         use: [{
           loader: 'url-loader',
           options: {

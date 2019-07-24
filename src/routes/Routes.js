@@ -11,6 +11,8 @@ import Footer from '../components/HomePage/Footer';
 import SignupForm from '../containers/SignupForm';
 import ConfirmEmailPage from '../containers/passwordReset/ConfirmEmailPage';
 import ResetPasswordPage from '../containers/passwordReset/ResetPasswordPage';
+import ArticleDetails from '../components/HomePage/HomeDetail';
+import { SignOut } from '../utils/SignOut';
 
 
 export class Routes extends Component {
@@ -21,12 +23,14 @@ export class Routes extends Component {
           <NavBar />
           <Footer />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact="true" path="/" component={Home} />
             <Route path="/signin" component={SignInPage} />
             <Route path="/hello" component={Hello} />
             <Route path="/signup" component={SignupForm} />
             <Route path="/confirm-email" component={ConfirmEmailPage} />
             <Route path="/reset-password" component={ResetPasswordPage} />
+            <Route path="/signout" component={SignOut} />
+            <Route path="/:slug" component={ArticleDetails} />
             <Route component={notFound} />
 
           </Switch>

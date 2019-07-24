@@ -2,9 +2,8 @@
   position: sticky;
   background-color: white;
   color: #00bfff;
-  margin-right: 2em;
-  margin-top: 3%;
-  width: 69em;
+  margin-top: 15%;
+  width: 15em;
   height: 19em;
   border-radius: 6px;
   border: 1px solid #7df9ff;
@@ -34,6 +33,16 @@
   background-color: #00bfff;
   border: #7df9ff 1px solid;
   margin-left: 3%;
+}
+
+.detail-tag {
+  background-color: white;
+  color: #00bfff;
+  text-align: center;
+}
+
+.tags-detail-heading{
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 768px) {

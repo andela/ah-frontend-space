@@ -42,7 +42,7 @@ export class SignInPage extends Component {
     actions
       .userSignIn(user)
       .then(() => {
-        history.push('/articles');
+        history.push('/');
         toast.success(`successfully logged in as ${user.email}`, {
           autoClose: 3000,
         });

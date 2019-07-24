@@ -26,7 +26,6 @@ describe('SignupForm',
           isValid: true,
         },
       };
-
       wrapper = shallow(<SignupForm {...props} />);
       instance = wrapper.instance();
     });

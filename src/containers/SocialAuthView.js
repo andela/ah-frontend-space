@@ -10,7 +10,7 @@ export class SocialAuthView extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.socialAuth.isAuthenticated) {
       const { history } = this.props;
-      history.push('/articles');
+      history.push('/');
     }
   }
 

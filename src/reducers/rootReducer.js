@@ -5,6 +5,9 @@ import apiCallsInProgress from './apiStatusReducers/apiStatusReducers';
 import signupReducer from './signupReducer';
 import socialAuthReducer from './socialAuthReducer';
 import resetPasswordReducer from './passwordResetReducers/passwordResetReducer';
+import articleReducer from './articleReducer';
+import articleDetailReducer from './articleReducer/articleDetailReducer';
+
 
 export default combineReducers({
   index: indexReducer,
@@ -13,4 +16,7 @@ export default combineReducers({
   signupReducer,
   socialAuth: socialAuthReducer,
   resetPasswordReducer,
+  articles: articleReducer,
+  articleDetailReducer,
+
 });

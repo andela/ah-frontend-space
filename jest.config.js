@@ -19,7 +19,7 @@ module.exports = {
   // with a single module
 
   moduleNameMapper: {
-    '^.+\\.(css|less|scss|jpeg|png|svg|gif)$': 'identity-obj-proxy',
+    '^.+\\.(css|less|scss|jpeg|png|jpg|svg|gif)$': 'identity-obj-proxy',
   },
 
   // eslint-disable-next-line max-len
