@@ -1,6 +1,7 @@
 import FirstAction from '../../actions/FirstAction';
 import { trialType } from '../../actions/types';
 
+
 describe('test first action', () => {
   it('it should return ', () => {
     const result = FirstAction();

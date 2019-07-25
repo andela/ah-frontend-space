@@ -5,6 +5,7 @@ import {
 import Home from '../components/HomePage/Home';
 import SignInPage from '../containers/signIn/SignInPage';
 import notFound from '../components/notfound';
+import Profile from '../containers/profile/index';
 import Hello from '../containers/Hello';
 import NavBar from '../components/HomePage/Navbar';
 import Footer from '../components/HomePage/Footer';
@@ -14,6 +15,7 @@ import ResetPasswordPage from '../containers/passwordReset/ResetPasswordPage';
 import ArticleDetails from '../components/HomePage/HomeDetail';
 import { SignOut } from '../utils/SignOut';
 
+import editContainer from '../containers/profile/EditProfile';
 
 export class Routes extends Component {
   render() {
@@ -30,6 +32,8 @@ export class Routes extends Component {
             <Route path="/confirm-email" component={ConfirmEmailPage} />
             <Route path="/reset-password" component={ResetPasswordPage} />
             <Route path="/signout" component={SignOut} />
+            <Route exact path="/profile" component={Profile} />
+            <Route path="/editprofile" component={editContainer} />
             <Route path="/:slug" component={ArticleDetails} />
             <Route component={notFound} />
 

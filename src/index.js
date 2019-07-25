@@ -9,8 +9,9 @@ import './assets/css/Navbar.scss';
 import './assets/css/Home.scss';
 import './assets/css/Tags.scss';
 import './assets/css/PasswordReset.scss';
+import './assets/css/Profile.scss';
 
 
-ReactDOM.render(
-  <App />, document.getElementById('root'),
+export default ReactDOM.render(
+  <App />, (document.getElementById('root')),
 );

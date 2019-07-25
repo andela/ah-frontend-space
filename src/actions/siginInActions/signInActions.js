@@ -21,6 +21,9 @@ export function userSignIn(user) {
         const isLoggedIn = true;
         sessionStorage.setItem('data', data);
         sessionStorage.setItem('isLoggedIn', isLoggedIn);
+        sessionStorage.setItem('email', data.data.user.email);
+        sessionStorage.setItem('username', data.data.user.username);
+        sessionStorage.setItem('token', data.data.user.auth_token);
         dispatch(signInSuccess(data));
       })
       .catch((error) => {
