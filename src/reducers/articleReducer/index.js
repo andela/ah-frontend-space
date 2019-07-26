@@ -16,6 +16,11 @@ const articleReducer = (state = initialState, action) => {
         ...state,
         error: action.error,
       };
+    case 'DELETE_ARTICLE_START':
+      console.log(action);
+      return {
+        ...state,
+      };
     default:
       return state;
   }

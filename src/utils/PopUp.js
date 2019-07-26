@@ -6,8 +6,9 @@ import PropTypes from 'prop-types';
 import * as deleteArticleAction from '../actions/articleActions/deleteArticleActions';
 
 
-class Popup extends React.Component {
+export class Popup extends React.Component {
     deleteArticle = () => {
+      console.log('deleting');
       const { slug, actions } = this.props;
       actions.deleteArticleAction(slug)
         .then(() => {

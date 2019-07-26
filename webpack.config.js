@@ -58,8 +58,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.API_URL': JSON.stringify(
-        // 'https://ah-haven-space.herokuapp.com',
-        'http://127.0.0.1:8000',
+        'https://ah-haven-space.herokuapp.com',
+        // 'http://127.0.0.1:8000',
       ),
     }),
     new HtmlWebPackPlugin({

@@ -2,11 +2,10 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { deleteArticle } from '../types';
 
-const baseUrl = `${process.env.API_URL}/api/articles`;
 const token = sessionStorage.getItem('token');
 
 export const deleteArticleAction = slug => dispatch => axios.delete(
-  `${baseUrl}/${slug}`,
+  `https://ah-haven-space.herokuapp.com/api/articles/${slug}`,
   {
     headers: {
       'Content-Type': 'application/json',
