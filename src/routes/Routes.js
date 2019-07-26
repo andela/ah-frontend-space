@@ -14,6 +14,7 @@ import ConfirmEmailPage from '../containers/passwordReset/ConfirmEmailPage';
 import ResetPasswordPage from '../containers/passwordReset/ResetPasswordPage';
 import ArticleDetails from '../components/HomePage/HomeDetail';
 import { SignOut } from '../utils/SignOut';
+import CreateArticleView from '../containers/createArticleView';
 
 import editContainer from '../containers/profile/EditProfile';
 
@@ -26,6 +27,8 @@ export class Routes extends Component {
           <Footer />
           <Switch>
             <Route exact="true" path="/" component={Home} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/create" component={CreateArticleView} />
             <Route path="/signin" component={SignInPage} />
             <Route path="/hello" component={Hello} />
             <Route path="/signup" component={SignupForm} />

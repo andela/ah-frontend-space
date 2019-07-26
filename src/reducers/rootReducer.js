@@ -7,8 +7,8 @@ import socialAuthReducer from './socialAuthReducer';
 import resetPasswordReducer from './passwordResetReducers/passwordResetReducer';
 import articleReducer from './articleReducer';
 import articleDetailReducer from './articleReducer/articleDetailReducer';
-
 import profileReducer from './profileReducer';
+import createReducer from './createArticleReducer';
 
 export default combineReducers({
   index: indexReducer,
@@ -20,4 +20,5 @@ export default combineReducers({
   articles: articleReducer,
   articleDetailReducer,
   profile: profileReducer,
+  createReducer,
 });

@@ -37,6 +37,7 @@ export class SignInPage extends Component {
     const { actions, history } = this.props;
     const { user, errors } = this.state;
 
+
     event.preventDefault();
     if (this.formIsInValid()) return;
     actions
@@ -76,6 +77,7 @@ export class SignInPage extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { user: { email, password }, errors } = this.state;
     const { loading } = this.props;
 

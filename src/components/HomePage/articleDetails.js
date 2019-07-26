@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-import dummy from '../../assets/images/dummy.jpg';
 
 class HomeDetails extends React.Component {
   ArticleContent = () => {
@@ -52,7 +51,7 @@ class HomeDetails extends React.Component {
         </div>
 
         <hr className="my-3" />
-        {article.url ? <img src={article.url} alt="article_image" className="body container img" /> : <img src={dummy} alt="article_image" className="body container img" />}
+        {article.image ? <img src={article.image} alt="article_image" className="body container img" /> : null }
         <p className="body">
           { article.body}
         </p>

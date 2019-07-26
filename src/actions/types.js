@@ -38,3 +38,8 @@ export const articleDetailActionTypes = {
   GET_ONE_ARTICLE_SUCCESS: 'GET_ONE_ARTICLE_SUCCESS',
   GET_ONE_ARTICLE_FAILURE: 'GET_ONE_ARTICLE_FAILURE',
 };
+
+export const createArticleTypes = {
+  CREATE_SUCCESS: 'CREATE_SUCCESS',
+  CREATE_FAILURE: 'CREATE_FAILURE',
+};

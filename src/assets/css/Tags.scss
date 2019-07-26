@@ -1,13 +1,13 @@
 .sidebar {
-  position: sticky;
-  background-color: white;
-  color: #00bfff;
-  margin-top: 15%;
-  width: 15em;
-  height: 19em;
-  border-radius: 6px;
-  border: 1px solid #7df9ff;
-  z-index: -2;
+  position: sticky !important;
+  background-color: white !important;
+  color: #00bfff !important;
+  margin-top: 15% !important;
+  width: 15em !important;
+  height: 19em !important;
+  border-radius: 6px !important;
+  border: 1px solid #7df9ff !important;
+  z-index: -2 !important;
 }
 
 .title {
@@ -30,9 +30,9 @@
 }
 
 .badge {
-  background-color: #00bfff;
-  border: #7df9ff 1px solid;
-  margin-left: 3%;
+  background-color: #00bfff !important;
+  border: #7df9ff 1px solid !important;
+  margin-left: 3% !important;
 }
 
 .detail-tag {
