@@ -15,8 +15,8 @@ import ResetPasswordPage from '../containers/passwordReset/ResetPasswordPage';
 import ArticleDetails from '../components/HomePage/HomeDetail';
 import { SignOut } from '../utils/SignOut';
 import CreateArticleView from '../containers/createArticleView';
-
 import editContainer from '../containers/profile/EditProfile';
+import UpdateArticlePage from '../containers/article/UpdateArticlePage';
 
 export class Routes extends Component {
   render() {
@@ -37,9 +37,9 @@ export class Routes extends Component {
             <Route path="/signout" component={SignOut} />
             <Route exact path="/profile" component={Profile} />
             <Route path="/editprofile" component={editContainer} />
+            <Route path="/edit-article" component={UpdateArticlePage} />
             <Route path="/:slug" component={ArticleDetails} />
             <Route component={notFound} />
-
           </Switch>
         </div>
       </BrowserRouter>

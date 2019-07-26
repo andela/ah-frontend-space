@@ -1,5 +1,6 @@
 import FirstAction from '../../actions/FirstAction';
 import { trialType } from '../../actions/types';
+import Index from '../../index';
 
 
 describe('test first action', () => {
@@ -10,4 +11,12 @@ describe('test first action', () => {
       message: 'come on',
     });
   });
+});
+
+jest.mock('react-dom', () => ({ render: jest.fn() }));
+
+it('renders without crashing', () => {
+  expect(JSON.stringify(
+    Object.assign({}, Index, { _reactInternalInstance: 'censored' }),
+  )).toMatchSnapshot();
 });

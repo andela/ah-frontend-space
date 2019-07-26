@@ -65,7 +65,6 @@ describe('ResetPasswordPage', () => {
         password2: '',
       },
     });
-    // const resetData = wrapper.state.user;
     wrapper.setProps({
       actions: {
         resetPasswordCall: () => new Promise((resolve) => {

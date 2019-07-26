@@ -5,3 +5,7 @@ exports[`App it should render interest 1`] = `ShallowWrapper {}`;
 exports[`App it should render interest 2`] = `ShallowWrapper {}`;
 
 exports[`App should match snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`App should match snapshot 2`] = `ShallowWrapper {}`;
+
+exports[`App should match snapshot 3`] = `ShallowWrapper {}`;
