@@ -69,4 +69,10 @@ describe('App', () => {
     const wrapper = shallow(<HomeDetails {...props2} />);
     expect(wrapper).toMatchSnapshot();
   });
+  it('should turn showpopup to true when toggle is called', () => {
+    const wrapper = shallow(<HomeDetails {...props2} />);
+    jest.spyOn(wrapper, 'setState');
+    wrapper.instance().togglePopup();
+    expect(wrapper.state().showPopup).toBe(true);
+  });
 });
