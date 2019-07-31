@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import HomeDetails from './articleDetails';
 import spinner from '../../assets/images/spinner.gif';
 import articleDetailAction from '../../actions/articleActions/articleDetailActions';
+import Comment from '../../containers/comments/commentsContainer';
 
 
 export class ArticleDetails extends React.Component {
@@ -34,6 +35,7 @@ export class ArticleDetails extends React.Component {
   }
 
   render() {
+    const { match: { params: { slug } } } = this.props;
     const { singleArticle, loading } = this.state;
     return (
       <div className="row container-fluid">
@@ -55,6 +57,8 @@ export class ArticleDetails extends React.Component {
                 cool
               </div>
             </div>
+            <hr className=" my-3 " style={{ marginLeft: '100px' }} />
+            <Comment slug={slug} />
           </div>
         </div>
       </div>

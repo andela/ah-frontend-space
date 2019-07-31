@@ -11,6 +11,8 @@ import profileReducer from './profileReducer';
 import createReducer from './createArticleReducer';
 import updateArticleReducer from './articleReducer/updateArticleReducers';
 import deleteArticleReducer from './articleReducer/deleteArticleReducer';
+import commentReducer from './comments/CommentsReducer';
+
 
 export default combineReducers({
   index: indexReducer,
@@ -25,4 +27,6 @@ export default combineReducers({
   createReducer,
   updateArticleReducer,
   deleteArticleReducer,
+  comments: commentReducer,
+
 });
