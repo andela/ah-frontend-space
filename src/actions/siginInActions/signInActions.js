@@ -23,6 +23,7 @@ export function userSignIn(user) {
         sessionStorage.setItem('username', data.data.user.username);
         sessionStorage.setItem('token', data.data.user.auth_token);
         sessionStorage.setItem('isLoggedIn', isLoggedIn);
+        sessionStorage.setItem('token', data.data.user.auth_token);
         dispatch(signInSuccess(data));
       })
       .catch((error) => {
