@@ -12,7 +12,7 @@ import createReducer from './createArticleReducer';
 import updateArticleReducer from './articleReducer/updateArticleReducers';
 import deleteArticleReducer from './articleReducer/deleteArticleReducer';
 import commentReducer from './comments/CommentsReducer';
-
+import rateArticleReducer from './rateReducer';
 
 export default combineReducers({
   index: indexReducer,
@@ -28,5 +28,5 @@ export default combineReducers({
   updateArticleReducer,
   deleteArticleReducer,
   comments: commentReducer,
-
+  rateArticleReducer,
 });

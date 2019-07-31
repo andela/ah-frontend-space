@@ -52,3 +52,7 @@ export const updateArticle = {
 export const deleteArticle = {
   DELETE_ARTICLE_SUCCESS: 'DELETE_ARTICLE_SUCCESS',
 };
+export const rateArticle = {
+  RATE_ARTICLE_SUCCESS: 'RATE_ARTICLE_SUCCESS',
+  RATE_ARTICLE_FAILURE: 'RATE_ARTICLE_FAILURE',
+};

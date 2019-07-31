@@ -7,7 +7,7 @@ class Article extends React.Component {
   ArticleContent = () => {
     const {
       article: {
-        author: { username }, created_at, body, title,
+        author: { username }, created_at, body, title, rating,
         read_time, likes_count, dislikes_count, slug,
       },
     } = this.props;
@@ -41,12 +41,7 @@ class Article extends React.Component {
           <h2 className="ratings">
             <strong>ratings:</strong>
             {' '}
-            <img
-              src="https://img.icons8.com/ultraviolet/40/000000/rating.png"
-              alt="ratings"
-              width="20"
-              height="20"
-            />
+            { rating }
           </h2>
         </div>
 
