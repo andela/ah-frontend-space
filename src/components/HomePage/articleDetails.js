@@ -2,13 +2,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import StarRatings from 'react-star-ratings';
 import Popup from '../../utils/PopUp';
+import rateAction from '../../actions/articleActions/rateArticleActions';
 
-class HomeDetails extends React.Component {
+export class HomeDetails extends React.Component {
   constructor() {
     super();
     this.state = {
       showPopup: false,
+      rating: 0,
     };
   }
 
@@ -19,10 +23,20 @@ class HomeDetails extends React.Component {
     });
   };
 
+
+  changeRating = (event) => {
+    const { article, rate } = this.props;
+    this.setState({
+      rating: event,
+    });
+    rate(article.slug, event);
+  }
+
   ArticleContent = () => {
     const { article } = this.props;
     const { showPopup } = this.state;
     // eslint-disable-next-line camelcase
+    const { rating } = this.state;
     const createdAt = new Date(article.created_at).toLocaleDateString('en-GB', {
       day: 'numeric',
       month: 'short',
@@ -59,12 +73,7 @@ class HomeDetails extends React.Component {
             <h2 className="ratings">
               <strong>ratings:</strong>
               {' '}
-              <img
-                src="https://img.icons8.com/ultraviolet/40/000000/rating.png"
-                alt="ratings"
-                width="20"
-                height="20"
-              />
+              {article.rating}
             </h2>
           </div>
 
@@ -74,6 +83,24 @@ class HomeDetails extends React.Component {
           <p className="body">
             { article.body}
           </p>
+          {(article.user_rating) || article.author.username === sessionStorage.getItem('username') || sessionStorage.getItem('isLoggedIn') === null
+            ? null
+            : (
+              <button type="submit" className="rate">
+                <p>rate this article</p>
+                {'  '}
+                <StarRatings
+                  rating={rating}
+                  starRatedColor="blue"
+                  changeRating={this.changeRating}
+                  numberOfStars={5}
+                  name="rating"
+                  starDimension="20px"
+                />
+              </button>
+            )
+          }
+
         </div>
         {
           sessionStorage.getItem('username') === article.author.username
@@ -147,5 +174,8 @@ Interest.defaultProps = {
 HomeDetails.propTypes = {
   article: PropTypes.shape().isRequired,
 };
+const mapStateToProps = state => ({
+  rateReducer: state.rateArticleReducer,
+});
 
-export default HomeDetails;
+export default connect(mapStateToProps, { rate: rateAction })(HomeDetails);

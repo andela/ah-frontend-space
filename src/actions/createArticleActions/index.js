@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import { createArticleTypes } from '../types';
 
 const createArticleAction = data => (dispatch) => {
-  console.log(data);
   const token = sessionStorage.getItem('token');
 
   const headers = {
