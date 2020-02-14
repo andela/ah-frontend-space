@@ -94,7 +94,7 @@
     "redux-thunk": "^2.3.0",
     "regenerator-runtime": "^0.13.2",
     "rxjs": "^6.5.2",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "jest": {
     "collectCoverageFrom": [
